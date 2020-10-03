@@ -1,68 +1,42 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+배포한 사이트는 아래의 주소에서 확인하실 수 있습니다. https://akiakma.github.io/YoutubeClone/
 
-## Available Scripts
+## YoutubeClone(Search & List)
 
-In the project directory, you can run:
 
-### `yarn start`
+## 소개
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+유투브에서 제공하는 APIs를 이용하여 간단한 유투브 검색기능 클론 코딩을 진행 하였습니다.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `yarn test`
+### 구현
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+유투브를 간단하게 클론해보았습니다. 첫 화면에서는 유투브 APIs를 이용하여 MostPopular 25가지를 기본적으로 표시합니다.
+검색후 검색버튼(엔터)을 클릭시 25가지의 검색관련된 리스트를 띄웁니다.
+리스트에서 원하는 영상을 클릭시 상세화면이 표시됩니다. 
+상세화면에는 APIs에서 제공하는 Yotube iFrame을 이용하여 video player를 표시하고 우측에는 리스트들이 첫화면처럼 두줄이 아닌,
+한줄로 표시됩니다. 반응형을 추가하여 상세화면에서 화면을 줄일시 video player 아래로 리스트들이 나열됩니다.
 
-### `yarn build`
+### 사용한 기술
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+•	React Hooks
+•	React.memo()
+•	useEffect
+•	Lifecycle 함수들 이해
+•	Postman
+• Public APIs
+•	Axios
+•	Fetch
+•	PostCSS
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### 어려웠던 점
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+사실 바로 앞서 만들었던 habit-tracker와 다른점은 1.외부 APIs를 사용했다는 것, 그리고 2.Class컴포넌트가 아닌 함수형 컴포넌트를 사용했다는 것 입니다.
+클래스 컴포넌트에 비해서 함수형이 더 간단하고 쉽게 느껴졌습니다. 함수형 컴포넌트에서 특히 componenetDidUpdate와 componentWillUpdate 부분이 처음에는 
+긴 용어때문인지 잘 이해가 안됬지만, useEffect에서 콜백함수로 랜더시 다시 불러오는 부분은 훨씬 간결하고 이해하기 쉬웠습니다. fetch를 예전에 사용해 본적이 있어서
+fetch를 먼저 사용해봤고 프로젝트 완료후 axios라이브러리를 추가하여 두가지 모두 사용해 보았습니다. 외부 APIs를 사용해본건 GoogleMaps와 KakaoMaps인데 처음에 APIs의 parameter
+값을 설정하는 부분이 헷갈려서 많이 헤맸습니다. 리액트가 많이 익숙하지않는데, 최상위 부모 컴포넌트에서 하위 컴포넌트들에게 state값을 props로 전달해줄때, 특히 그 깊이가 깊어질수록 그리고,
+이벤트 처리에서 클릭함수 인자값으로 props들을 전달해줄때는 매번 해매는 것 같습니다.
+앞으로는 Hooks를 좀더 깊게 공부해서 숙달될수있도록 해야할 것 같습니다.
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
 ### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
