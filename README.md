@@ -24,8 +24,6 @@
 
 •	useEffect
 
-•	Lifecycle 함수들 이해
-
 •	Postman
 
 • Public APIs
