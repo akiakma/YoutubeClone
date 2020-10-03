@@ -19,13 +19,21 @@
 ### 사용한 기술
 
 •	React Hooks
+
 •	React.memo()
+
 •	useEffect
+
 •	Lifecycle 함수들 이해
+
 •	Postman
+
 • Public APIs
+
 •	Axios
+
 •	Fetch
+
 •	PostCSS
 
 ### 어려웠던 점
@@ -39,4 +47,3 @@ fetch를 먼저 사용해봤고 프로젝트 완료후 axios라이브러리를 �
 앞으로는 Hooks를 좀더 깊게 공부해서 숙달될수있도록 해야할 것 같습니다.
 
 
-### `yarn build` fails to minify
