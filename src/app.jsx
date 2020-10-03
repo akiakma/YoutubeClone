@@ -23,10 +23,10 @@ function App({ youtube }) {
     youtube
       .mostPopular() //
       .then(videos => setVideos(videos));
-  }, []);
+  }, [youtube]);
 
   return (
-    <div classname={styles.app}>
+    <div className={styles.app}>
       <SearchHeader onSearch={search} />
       <section className={styles.content}>
         {selectedVideo && (
